@@ -64,6 +64,7 @@
           <img src="./assets/img/store-01.jpg" alt="store-01" />
         </div>
       </section>
+
       <section class="menu">
         <div class="theme">
           <p class="title">Discover</p>
@@ -145,28 +146,109 @@
           </div>
         </div>
       </section>
+
       <section class="booking">
         <div class="booking-left">
-          <div class="booking-theme">
+          <div class="booking-theme-left">
             <p class="title">Time</p>
             <h3>Open</h3>
           </div>
           <img src="./assets/img/ic-plate.png" alt="ic-plate" />
           <div class="booking-menu-content">
             <div>
-              <h3></h3>
-              <p></p>
-              <p></p>
+              <h3 class="booking-title">Monday - Friday</h3>
+              <p>7AM - 11AM (Breakfast)</p>
+              <p>11AM - 10PM (Lunch / Dinner)</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
-              <p></p>
+              <h3 class="booking-title">Saturday / Sunday</h3>
+              <p>8AM - 1PM (Brunch)</p>
+              <p>1PM - 9PM (Lunch / Dinner)</p>
             </div>
           </div>
-          <h3></h3>
+          <h3 class="booking-title">+15 890 979 25 52</h3>
         </div>
-        <div class="booking-right"></div>
+        <div class="booking-right">
+          <div class="booking-theme-right">
+            <h2 class="title">Reservation</h2>
+            <h1>Online Booking</h1>
+          </div>
+          <img src="./assets/img/ic-plate.png" alt="ic-plate" />
+
+          <form class="form-booking">
+            <select name="people" id="people">
+              <option value="null">People</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="More">More...</option>
+            </select>
+
+            <input type="date" id="date" />
+            <input type="time" id="time" />
+            <input type="text" id="name" placeholder="Name" />
+            <input type="number" id="number" placeholder="Phone" />
+            <input type="email" id="email" placeholder="Email" />
+          </form>
+          <button type="submit">Book now</button>
+        </div>
+      </section>
+
+      <section class="event">
+        <div class="event-theme">
+          <h3 class="title">Upcoming</h3>
+          <h1>Our event</h1>
+        </div>
+        <img src="./assets/img/ic-plate.png" alt="ic-plate" />
+        <div class="event-board">
+          <div class="board-left">
+            <div class="card-left">
+              <div class="card-img">
+                <img src="/assets/img/event-01.jpg" alt="event-01" />
+                <div class="box-img">
+                  <h4></h4>
+                  <p></p>
+                </div>
+                <div class="card-content">
+                  <h3></h3>
+                  <p class="location"></p>
+                  <h5 class="buyBtn">Buy Tickets</h5>
+                </div>
+              </div>
+            </div>
+            <div class="card-left">
+              <div class="card-img">
+                <img src="/assets/img/event-02.jpg" alt="event-02" />
+                <div class="box-img">
+                  <h4></h4>
+                  <p></p>
+                </div>
+                <div class="card-content">
+                  <h3></h3>
+                  <p class="location">
+                    <i class="fa-solid fa-map-pin"></i> Restaurent Resto
+                    <i class="fa-regular fa-clock"></i> 10.00pm - 6am
+                  </p>
+                  <h5 class="buyBtn">Buy Tickets</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="board-right">
+            <div class="card-img-right">
+              <img src="./assets/img/event-03.jpg" alt="event-03" />
+              <div class="card">
+                <div class="card-content">
+                  <h3></h3>
+                  <p class="location"></p>
+                  <p class="buyBtn">Buy Tickets</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
