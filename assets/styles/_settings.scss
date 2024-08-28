@@ -1,7 +1,9 @@
-$titleColor: rgb(153,106,67);
-$colorW: white;
-$colorB: black;
+$titleColor: rgb(153, 106, 67);
+$colorW1: white;
+$colorW2: rgb(238, 238, 238);
+$colorB1: black;
 $colorHover: lightcoral;
+$colorB2: rgb(33, 32, 30);
 $fontMenu: Allura;
 $fontRegular1: Poppins;
 $fontRegular2: Roboto;
@@ -20,18 +22,21 @@ $fontRegular2: Roboto;
 @mixin titleMenu {
   color: $titleColor;
   font-family: $fontMenu;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
-
 @mixin regFont {
-  color: $colorW;
+  color: $colorW1;
   font-family: $fontRegular1;
   font-size: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
+@mixin imgContainer {
+  object-fit: cover;
+  width: 100%;
+}
 
 @font-face {
   font-family: "Allura";
@@ -49,9 +54,10 @@ $fontRegular2: Roboto;
 }
 
 body {
-  color: $colorW;
+  color: $colorW1;
   text-align: center;
   margin: 0 auto;
+  font-family: $fontRegular1;
   opacity: 1;
 
   &::before {
@@ -59,12 +65,11 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: $colorB;
+    background: $colorB1;
     top: 0;
     left: 0;
     animation: loadAnim 2s ease forwards;
-    animation-delay: 0.30s;
-
+    animation-delay: 0.3s;
 
     @keyframes loadAnim {
       to {
@@ -79,4 +84,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.title {
+  @include titleMenu;
+  text-align: center;
 }
