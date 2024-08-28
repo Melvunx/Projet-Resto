@@ -1,0 +1,140 @@
+header {
+  background: url(../img/bg-slider-06.jpg) center/cover;
+  min-height: 100vh;
+
+  .header-content {
+    nav {
+      display: flex;
+      opacity: 0;
+      justify-content: space-around;
+      animation: navPop 2s ease forwards;
+      animation-delay: 0.5s;
+      transition: 0.5s;
+
+      @keyframes navPop {
+        to {
+          opacity: 1;
+        }
+      }
+
+      h2 {
+        @include titleMenu;
+        color: $colorW;
+        font-size: 2rem;
+        cursor: default;
+        transition: 0.4s;
+
+        &:hover {
+          color: $titleColor;
+          transform: scale(1.1);
+        }
+      }
+
+      ul {
+        @include flexContainer;
+        gap: 40px;
+      }
+
+      li {
+        cursor: pointer;
+        position: relative;
+      }
+
+      .nav-link {
+        gap: 60px;
+
+        li {
+          @include regFont;
+          font-size: 0.7rem;
+          letter-spacing: 0;
+          font-family: $fontRegular2;
+          transition: 0.3s;
+
+          @media screen and (max-width: 915px) {
+            display: none;
+          }
+
+          &:hover {
+            color: $colorHover;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $colorHover;
+            top: -60%;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            animation: barSlideOut 0.3s ease forwards;
+          }
+
+          &:hover::after {
+            animation: barSlideIn 0.3s ease forwards;
+          }
+
+          @keyframes barSlideIn {
+            0% {
+              transform: translateX(-50%) scale(0);
+            }
+            100% {
+              transform: translateX(-50%) scale(1);
+            }
+          }
+          @keyframes barSlideOut {
+            from {
+              transform: translateX(-50%) scale(1);
+            }
+            to {
+              transform: translateX(-50%) scale(0);
+            }
+          }
+        }
+      }
+
+      .header-logo {
+        gap: 10px;
+
+        li {
+          transition: 0.3s;
+          &:hover {
+            color: $titleColor;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .header-menu {
+      @include colunmFlex;
+      gap: 15px;
+      min-height: 80vh;
+
+      p {
+        @include titleMenu;
+        font-size: 1.8rem;
+      }
+
+      h1 {
+        @include regFont;
+        font-size: 2.3rem;
+      }
+
+      .img-container {
+        object-fit: cover;
+        width: 70%;
+        padding: 10px 0;
+        img {
+          width: 3%;
+        }
+      }
+
+      h5 {
+        @include regFont;
+        font-family: $fontRegular2;
+        font-weight: 200;
+      }
+    }
+  }
+}
