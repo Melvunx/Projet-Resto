@@ -43,6 +43,21 @@ body::before {
 
 main {
   background: rgb(33, 32, 30);
+  position: relative;
+  z-index: -100;
+}
+main .bg-img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  top: 20%;
+}
+main .bg-img:first-of-type {
+  -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 75%, 0 75%);
+          clip-path: polygon(0 30%, 100% 30%, 100% 75%, 0 75%);
+  top: initial;
+  bottom: 0;
 }
 
 * {
