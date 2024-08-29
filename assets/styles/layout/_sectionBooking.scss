@@ -1,0 +1,120 @@
+.booking {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 70%;
+  margin: 0 auto;
+
+  .booking-left-container {
+    background: $colorB1;
+
+    .booking-left {
+      padding: 10px;
+      border: 1px $colorW1 dashed;
+      margin: 20px;
+      position: relative;
+
+      .booking-menu-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & > div {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      h3.booking-title {
+        @include regFont;
+        color: $titleColor;
+        font-size: 1rem;
+        margin: 5px 0;
+
+        &:last-child {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .booking-right {
+    background: $colorW1;
+    padding: 35px;
+    position: relative;
+    @include colunmFlex;
+    justify-content: initial;
+    gap: 30px;
+
+    .booking-theme-right {
+      h1 {
+        @include regFont;
+        font-size: 1rem;
+        letter-spacing: 0;
+        color: $colorB1;
+      }
+    }
+
+    .form-booking {
+      display: grid;
+      grid-template-areas: 
+      "is id ih"
+      "in ip ie";
+      column-gap: 20px;
+      row-gap: 15px;
+
+      input, select {
+        padding: 5px;
+        border: none;
+        border-bottom: 1px gray solid;
+        outline: none;
+        transition: 0.2s;
+
+        &::selection{
+          background: $titleColor;
+          color: $colorW2;
+        }
+
+        &:hover {
+          background: rgba(132, 131, 131, 0.316);
+          color: green;
+
+          &::placeholder {
+            color: green;
+          }
+        }
+      }
+
+      input {
+        font-family: $fontRegular2;
+        letter-spacing: 1px;
+      }
+
+      input[type="date"] {
+        font-style: italic;
+        text-transform: uppercase;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%) scale(1);
+      @include regFont;
+      background:  $colorB1;
+      border-radius: 20px;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        background: $colorB2;
+        transform: translate(-50%)  scale(1.1);
+      }
+
+      &:active {
+        transform: translate(-50%) scale(0.9);
+      }
+    }
+  }
+}

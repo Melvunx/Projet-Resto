@@ -1,0 +1,78 @@
+.event {
+  @include colunmFlex;
+  gap: 10px;
+min-height: 75vh;
+
+  // .event-theme {
+  //   margin-top: 20px;
+  // }
+
+  .event-board {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "c1 c3"
+      "c2 c3";
+    grid-gap: 10px;
+    width: 60%;
+    margin: 0 auto;
+
+    .card-img {
+      img {
+        width: 30%;
+      }
+    }
+
+    .card-content {
+      @include colunmFlex;
+      h3,
+      h5.buyBtn {
+        @include cardFont;
+      }
+
+      p.location {
+        color: $colorW2;
+        font-size: 0.7rem;
+      }
+    }
+
+    .board-left {
+      @include colunmFlex;
+      gap: 10px;
+
+      .card-left {
+        .card-img {
+          background: $colorW1;
+          display: flex;
+
+          .card-content {
+            padding: 25px 0;
+            align-items: flex-start;
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .board-right {
+    @include colunmFlex;
+    background: url(../img/event-03.jpg) center/cover;
+    position: relative;
+    .card-container {
+      @include colunmFlex;
+      background: $colorW1;
+      height: 80%;
+      .card {
+        // position: relative;
+        .card-content {
+          gap: 20px;
+
+          h3 {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
