@@ -57,7 +57,7 @@
   &::after {
     content: "";
     position: absolute;
-    height: 620px;
+    height: 440px;
     width: 100%;
     left: 50%;
     top: 60%;
@@ -103,21 +103,48 @@
     display: grid;
     grid-template-columns: 50% 50%;
     background: $colorW2;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
+    box-shadow: 0 -5px 0 0 $titleColor;
 
     .dishes-left,
     .dishes-right {
-      position: relative;
       & > div {
-        padding: 15px ;
+        position: relative;
+        padding: 25px;
         display: flex;
         justify-content: space-around;
+        align-items: center;
+
+        h4.price {
+          color: $titleColor;
+          position: absolute;
+          right: 5%;
+        }
+
         img {
           position: absolute;
           width: 15%;
           border-radius: 50px;
           left: 5%;
+        }
+
+        .menu-content {
+          display: flex;
+          flex-direction: column;
+          width: 60%;
+
+          h3.title-dishes {
+            @include regFont;
+            color: $colorB1;
+            text-align: left;
+          }
+
+          p {
+            color: $colorB1;
+            font-size: 0.8rem;
+            text-align: left;
+          }
         }
       }
     }

@@ -346,7 +346,7 @@ header .header-content .header-menu h5 {
 .menu::after {
   content: "";
   position: absolute;
-  height: 620px;
+  height: 440px;
   width: 100%;
   left: 50%;
   top: 60%;
@@ -395,21 +395,29 @@ header .header-content .header-menu h5 {
   display: grid;
   grid-template-columns: 50% 50%;
   background: rgb(238, 238, 238);
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
-}
-.menu .dishes-content .dishes-left,
-.menu .dishes-content .dishes-right {
-  position: relative;
+  -webkit-box-shadow: 0 -5px 0 0 rgb(153, 106, 67);
+          box-shadow: 0 -5px 0 0 rgb(153, 106, 67);
 }
 .menu .dishes-content .dishes-left > div,
 .menu .dishes-content .dishes-right > div {
-  padding: 15px;
+  position: relative;
+  padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu .dishes-content .dishes-left > div h4.price,
+.menu .dishes-content .dishes-right > div h4.price {
+  color: rgb(153, 106, 67);
+  position: absolute;
+  right: 5%;
 }
 .menu .dishes-content .dishes-left > div img,
 .menu .dishes-content .dishes-right > div img {
@@ -417,4 +425,31 @@ header .header-content .header-menu h5 {
   width: 15%;
   border-radius: 50px;
   left: 5%;
+}
+.menu .dishes-content .dishes-left > div .menu-content,
+.menu .dishes-content .dishes-right > div .menu-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+.menu .dishes-content .dishes-left > div .menu-content h3.title-dishes,
+.menu .dishes-content .dishes-right > div .menu-content h3.title-dishes {
+  color: white;
+  font-family: Poppins;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+  text-align: left;
+}
+.menu .dishes-content .dishes-left > div .menu-content p,
+.menu .dishes-content .dishes-right > div .menu-content p {
+  color: black;
+  font-size: 0.8rem;
+  text-align: left;
 }/*# sourceMappingURL=index.css.map */
