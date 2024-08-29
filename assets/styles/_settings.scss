@@ -81,21 +81,6 @@ body {
 
 main {
   background: $colorB2;
-  position: relative;
-  z-index: -100;
-
-  .bg-img {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    z-index: -1;
-    top: 20%;
-    &:first-of-type {
-      clip-path: polygon(0 30%, 100% 30%, 100% 75%, 0 75%);
-      top: initial;
-      bottom: 0;
-    }
-  }
 }
 
 * {

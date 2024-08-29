@@ -43,21 +43,6 @@ body::before {
 
 main {
   background: rgb(33, 32, 30);
-  position: relative;
-  z-index: -100;
-}
-main .bg-img {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  z-index: -1;
-  top: 20%;
-}
-main .bg-img:first-of-type {
-  -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 75%, 0 75%);
-          clip-path: polygon(0 30%, 100% 30%, 100% 75%, 0 75%);
-  top: initial;
-  bottom: 0;
 }
 
 * {
@@ -346,6 +331,29 @@ header .header-content .header-menu h5 {
   width: 100%;
 }
 
+.menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  min-height: 100vh;
+}
+.menu::after {
+  content: "";
+  position: absolute;
+  height: 620px;
+  width: 100%;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url(../img/bg-menu-01.jpg) center/cover;
+}
 .menu .menuBar .link-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,4 +388,33 @@ header .header-content .header-menu h5 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+.menu .dishes-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: rgb(238, 238, 238);
+  width: 50%;
+  margin: 0 auto;
+}
+.menu .dishes-content .dishes-left,
+.menu .dishes-content .dishes-right {
+  position: relative;
+}
+.menu .dishes-content .dishes-left > div,
+.menu .dishes-content .dishes-right > div {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.menu .dishes-content .dishes-left > div img,
+.menu .dishes-content .dishes-right > div img {
+  position: absolute;
+  width: 15%;
+  border-radius: 50px;
+  left: 5%;
 }/*# sourceMappingURL=index.css.map */
