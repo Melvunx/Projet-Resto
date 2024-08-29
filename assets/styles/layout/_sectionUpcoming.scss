@@ -1,15 +1,18 @@
 .event {
   @include colunmFlex;
-  gap: 10px;
-min-height: 75vh;
+  gap: 30px;
+  min-height: 75vh;
 
-  // .event-theme {
-  //   margin-top: 20px;
-  // }
+  .box-img {
+    h4,
+    p {
+      font-size: 0.7rem;
+    }
+  }
 
   .event-board {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     grid-template-areas:
       "c1 c3"
       "c2 c3";
@@ -42,8 +45,18 @@ min-height: 75vh;
 
       .card-left {
         .card-img {
+          position: relative;
           background: $colorW1;
           display: flex;
+          gap: 10px;
+
+          .box-img {
+            position: absolute;
+            left: 10%;
+            top: 30%;
+            background: $colorB2;
+            padding: 11px;
+          }
 
           .card-content {
             padding: 25px 0;
@@ -58,18 +71,31 @@ min-height: 75vh;
   .board-right {
     @include colunmFlex;
     background: url(../img/event-03.jpg) center/cover;
-    position: relative;
     .card-container {
+      position: relative;
       @include colunmFlex;
       background: $colorW1;
       height: 80%;
+      width: 90%;
+
+      .box-img {
+        position: absolute;
+        background: $colorB2;
+        padding: 7px;
+        top: 0;
+      }
       .card {
-        // position: relative;
         .card-content {
-          gap: 20px;
+          gap: 3px;
 
           h3 {
             width: 80%;
+            line-height: 25px;
+          }
+
+          h5.buyBtn {
+            position: absolute;
+            bottom: 10%;
           }
         }
       }
