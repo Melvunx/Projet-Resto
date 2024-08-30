@@ -4,6 +4,10 @@
   width: 70%;
   margin: 0 auto;
 
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: 100%;
+  }
+
   .booking-left-container {
     background: $colorB1;
 
@@ -56,20 +60,30 @@
 
     .form-booking {
       display: grid;
-      grid-template-areas: 
-      "is id ih"
-      "in ip ie";
+      grid-template-areas:
+        "is id ih"
+        "in ip ie";
       column-gap: 20px;
       row-gap: 15px;
 
-      input, select {
+      @media screen and (max-width: 1050px) {
+        @include colunmFlex;
+        gap: 15px;
+        input, select {
+          width: 100%;
+        }
+      }
+
+
+      input,
+      select {
         padding: 5px;
         border: none;
         border-bottom: 1px gray solid;
         outline: none;
         transition: 0.2s;
 
-        &::selection{
+        &::selection {
           background: $titleColor;
           color: $colorW2;
         }
@@ -101,15 +115,21 @@
       left: 50%;
       transform: translate(-50%) scale(1);
       @include regFont;
-      background:  $colorB1;
+      background: $colorB1;
       border-radius: 20px;
       padding: 6px 12px;
       cursor: pointer;
       transition: 0.2s;
 
+      @media screen and (max-width: 1050px) {
+        position: initial;
+        margin-left: 100px;
+        transform: translate(-50%);
+      }
+
       &:hover {
         background: $colorB2;
-        transform: translate(-50%)  scale(1.1);
+        transform: translate(-50%) scale(1.1);
       }
 
       &:active {

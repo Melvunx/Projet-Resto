@@ -7,12 +7,21 @@ footer {
     grid-template-columns: 63% 37%;
     padding: 50px 5px;
 
+    @media screen and (max-width: 880px) {
+      @include colunmFlex;
+      min-height: 25vh;
+    }
+
     .footer-left {
       display: flex;
       flex-direction: column;
       gap: 30px;
       width: 60%;
       margin: 0 auto;
+
+      @media screen and (max-width: 880px) {
+      display: none;
+      }
 
       h2,
       p {
@@ -27,6 +36,13 @@ footer {
   }
   .footer-right {
     position: relative;
+
+    @media screen and (max-width: 880px) {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
     .newsletter {
       position: absolute;
       top: 10%;
@@ -34,6 +50,11 @@ footer {
       @include colunmFlex;
       align-items: flex-start;
       gap: 13px;
+
+      @media screen and (max-width: 880px) {
+          position: initial;
+        }
+
 
       label {
         @include regFont;
@@ -57,9 +78,26 @@ footer {
     display: flex;
     gap: 20px;
 
+    @media screen and (max-width: 880px) {
+      position: initial;
+    }
+
+
     ul {
       display: flex;
       gap: 35px;
+
+      li {
+        transition: 0.2s;
+        &:hover {
+          color: $colorG;
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
     }
   }
 }

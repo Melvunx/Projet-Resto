@@ -3,6 +3,10 @@
   gap: 30px;
   min-height: 75vh;
 
+  @media screen and (max-width: 880px) {
+    display: none;
+  }
+
   .box-img {
     h4,
     p {

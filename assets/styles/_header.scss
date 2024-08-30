@@ -101,19 +101,31 @@ header {
       p {
         @include titleMenu;
         font-size: 1.8rem;
+
+        @media screen and (max-width: 915px) {
+          font-size: 3rem;
+        }
       }
 
       h1 {
         @include regFont;
         font-size: 2.3rem;
+
+        @media screen and (max-width: 915px) {
+          font-size: 3.5rem;
+        }
       }
 
       .img-container {
         object-fit: cover;
-        width: 70%;
+        width: 100%;
         padding: 10px 0;
         img {
           width: 3%;
+
+          @media screen and (max-width: 915px) {
+            width: 6%;
+          }
         }
       }
 
@@ -121,6 +133,10 @@ header {
         @include regFont;
         font-family: $fontRegular2;
         font-weight: 200;
+
+        @media screen and (max-width: 915px) {
+          font-size: 1.5rem;
+        }
       }
     }
   }

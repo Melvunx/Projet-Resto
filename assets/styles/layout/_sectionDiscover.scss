@@ -3,6 +3,10 @@
   grid-template-columns: 50% 50%;
   background: $colorW2;
 
+  @media screen and (max-width: 1070px) {
+    grid-template-columns: 100%;
+  }
+
   .store-left {
     @include colunmFlex;
     gap: 20px;
@@ -39,8 +43,12 @@
       }
     }
   }
-    img {
-      width: 100%;
+  img.right-img {
+    width: 100%;
+
+    @media screen and (max-width: 1070px) {
+      display: none;
+    }
   }
 }
 
@@ -104,14 +112,43 @@
     margin: 0 auto;
     box-shadow: 0 -5px 0 0 $titleColor;
 
+
+    @media screen and (max-width: 1015px) {
+      grid-template-columns: 100%;
+    }
+    
+    
+
     .dishes-left,
     .dishes-right {
+      transition: opacity 0.3s ease;
+      &:hover > div:not(:hover) {
+        opacity: 0.5;
+
+
+      }
+
+
       & > div {
         position: relative;
         padding: 25px;
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        &:hover {
+          .price {
+            color: green;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 5%;
+          width: 80%;
+          border-bottom: $titleColor 1px dashed;
+        }
 
         h4.price {
           color: $titleColor;
