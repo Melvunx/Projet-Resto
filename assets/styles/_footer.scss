@@ -1,0 +1,65 @@
+footer {
+  margin-top: 150px;
+  background: url(../img/bg-footer.jpg);
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 63% 37%;
+    padding: 50px 5px;
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 60%;
+      margin: 0 auto;
+
+      h2,
+      p {
+        text-align: left;
+      }
+
+      p {
+        color: gray;
+        line-height: 30px;
+      }
+    }
+  }
+  .footer-right {
+    position: relative;
+    .newsletter {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      @include colunmFlex;
+      align-items: flex-start;
+      gap: 13px;
+
+      label {
+        @include regFont;
+        letter-spacing: 0;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      input[type="email"] {
+        background: none;
+        border: 1px $titleColor solid;
+        padding: 8px 18px;
+      }
+    }
+  }
+  .footer-contact {
+    position: absolute;
+    align-items: center;
+    bottom: 5%;
+    left: 10%;
+    display: flex;
+    gap: 20px;
+
+    ul {
+      display: flex;
+      gap: 35px;
+    }
+  }
+}

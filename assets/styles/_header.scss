@@ -17,19 +17,6 @@ header {
         }
       }
 
-      h2 {
-        @include titleMenu;
-        color: $colorW1;
-        font-size: 2rem;
-        cursor: default;
-        transition: 0.4s;
-
-        &:hover {
-          color: $titleColor;
-          transform: scale(1.1);
-        }
-      }
-
       ul {
         @include flexContainer;
         gap: 40px;

@@ -1,9 +1,10 @@
 $titleColor: rgb(153, 106, 67);
 $colorW1: white;
-$colorW2: rgb(219, 210, 210);
+$colorW2: rgb(238,238,238);
 $colorB1: black;
 $colorHover: lightcoral;
 $colorB2: rgb(33, 32, 30);
+$colorG: gray;
 $fontMenu: Allura;
 $fontRegular1: Poppins;
 $fontRegular2: Roboto;
@@ -99,4 +100,18 @@ main {
 .title {
   @include titleMenu;
   text-align: center;
+}
+
+h2.logo {
+  @include titleMenu;
+  color: $colorW1;
+  font-size: 2rem;
+  cursor: default;
+  transition: 0.4s;
+  max-width: 60px;
+
+  &:hover {
+    color: $titleColor;
+    transform: scale(1.1);
+  }
 }
